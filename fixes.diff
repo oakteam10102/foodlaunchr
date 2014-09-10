@@ -1,0 +1,131 @@
+commit 9a3addd54aeafeb72be05db49fbaee20de1d19ea
+Author: Danny Radev <final.wharf@gmail.com>
+Date:   Sun Aug 10 22:39:08 2014 +0300
+
+    Fixed assets precompilation and database prod settings.
+    
+    Fixed core.css.
+
+diff --git a/app/models/user.rb b/app/models/user.rb
+index de75328..df5e2a6 100755
+--- a/app/models/user.rb
++++ b/app/models/user.rb
+@@ -1,7 +1,7 @@
+ class User < ActiveRecord::Base
+     belongs_to :referrer, :class_name => "User", :foreign_key => "referrer_id"
+     has_many :referrals, :class_name => "User", :foreign_key => "referrer_id"
+-    
++
+     attr_accessible :email
+ 
+     validates :email, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." }
+@@ -15,25 +15,25 @@ class User < ActiveRecord::Base
+             'count' => 5,
+             "html" => "Shave<br>Cream",
+             "class" => "two",
+-            "image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
++            "image" =>  "refer/cream-tooltip@2x.png"
+         },
+         {
+             'count' => 10,
+             "html" => "Truman Handle<br>w/ Blade",
+             "class" => "three",
+-            "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
++            "image" => "refer/truman@2x.png"
+         },
+         {
+             'count' => 25,
+             "html" => "Winston<br>Shave Set",
+             "class" => "four",
+-            "image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
++            "image" => "refer/winston@2x.png"
+         },
+         {
+             'count' => 50,
+             "html" => "One Year<br>Free Blades",
+             "class" => "five",
+-            "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
++            "image" => "refer/blade-explain@2x.png"
+         }
+     ]
+ 
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index d7dedcd..11279fb 100755
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -20,7 +20,7 @@
+                 <meta name="viewport" content="width=1120" />
+             <% end %>
+         <% end %>
+-        <%= stylesheet_link_tag "core.css", :media => "all" %>
++        <%= stylesheet_link_tag "application.css", :media => "all" %>
+         <%= csrf_meta_tags %>
+ </head>
+ <body id="<%= @bodyId %>">
+diff --git a/app/views/users/refer.html.erb b/app/views/users/refer.html.erb
+index 0f13206..6391280 100755
+--- a/app/views/users/refer.html.erb
++++ b/app/views/users/refer.html.erb
+@@ -25,7 +25,7 @@
+     </div>
+ </div>
+ 
+-<% 
++<%
+     referrals_count = @user.referrals.count
+ 
+     stops = User::REFERRAL_STEPS
+@@ -39,7 +39,7 @@
+         else
+             stop["selected"] = false
+         end
+-    }   
++    }
+  %>
+ <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
+     <div class="page-content">
+@@ -53,7 +53,7 @@
+                     <p><%= stop["html"].html_safe %></p>
+ 
+                     <div class="tooltip">
+-                        <img src="<%= stop["image"] %>" height="254">
++                        <img src="<%= asset_path stop["image"] %>" height="254">
+                     </div>
+                 </li>
+             <% end %>
+@@ -65,11 +65,11 @@
+             </div>
+         </div>
+ 
+-        <% 
++        <%
+             words = ''
+             if referrals_count == 1
+                 words = 'friend has'
+-            elsif 
++            elsif
+                 words = 'friends have'
+             end
+ 
+@@ -82,7 +82,7 @@
+         <% end %>
+         <p class="check brandon">Keep checking</p>
+ 
+-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
++        <p class="ship brandon">We ship to the U.S. (&amp; Canada Soon)</p>
+         <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+     </div>
+-</div>
+\ No newline at end of file
++</div>
+diff --git a/config/database.yml b/config/database.yml
+index eabf7ec..ec5547e 100755
+--- a/config/database.yml
++++ b/config/database.yml
+@@ -19,4 +19,5 @@ test:
+ production:
+   adapter: postgresql
+   database: prelaunchr
+-  host: localhost
++  url: <%= ENV['DATABASE_URL'] %>
++

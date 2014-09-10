@@ -1,0 +1,500 @@
+   11  ls
+   12  cd curelead
+   13  git push heroku master
+   14  git commit -am "comme"
+   15  git add .
+   16  git commit -am "comments"
+   17  git push heroku master
+   18  git add .
+   19  git commit -am "link fix"
+   20  git push heroku master
+   21  git add .
+   22  git commit -am "link edit allow"
+   23  git push heroku master
+   24  git add .
+   25  git commit -am "post url text"
+   26  git push heroku master
+   27  rails server
+   28  rails server
+   29  ls
+   30  cd workspace/
+   31  cd curelead/
+   32  ls
+   33  history | grep console
+   34  heroku run rails console
+   35  ls
+   36  heroku addons:add filepicker
+   37  ls
+   38  cd workspace/
+   39  ls
+   40  git clone git@github.com:curelead/curelead.git curelead2
+   41  git clone git@github.com:pije76/rails-reddit-clone.git curel2
+   42  ssh -vT git@github.com
+   43  ssh -T curelead@github.com
+   44  ssh -T git@github.com
+   45  eval `ssh-agent -s`
+   46  ssh-add
+   47  ssh -T git@github.com
+   48  cd ~/.ssh
+   49  ls -al
+   50  pbcopy < ~/.ssh/id_rsa.pub
+   51  ssh -T git@github.com
+   52  ssh -T curelead@github.com
+   53  git clone git@github.com:curelead/curelead.git curelead2
+   54  ls
+   55  rm -r curel
+   56  ls
+   57  rm -r curel
+   58  y
+   59  ls
+   60  rm -r curelead2/
+   61  y
+   62  ls
+   63  pwd
+   64  cd ..
+   65  ls
+   66  cd workspace/
+   67  ls
+   68  git clone git@github.com:curelead/curelead.git curelead2
+   69  ls
+   70  cd curelead
+   71  cd ..
+   72  cd curelead
+   73  ls
+   74  git init
+   75  git add .
+   76  git commit -am "my commit"
+   77  heroku create cureleadv2 (create heroku stack if not yet)
+   78  heroku create cureleadv2
+   79  ls
+   80  ce ..
+   81  cd ..
+   82  ls
+   83  cd source
+   84  git clean
+   85  git clean -f
+   86  ls
+   87  touch README.md
+   88  git init
+   89  git add README.md
+   90  git commit -m "first commit"
+   91  git remote add origin https://github.com/curelead/source.git
+   92  git remote add origin https://github.com/curelead/source.git
+   93  git remote rm origin
+   94  git remote add origin https://github.com/curelead/source.git
+   95  git push -u origin master
+   96  ls
+   97  cd workspace/
+   98  ls
+   99  cd curelead/
+  100  ls
+  101  git remote add origin https://github.com/curelead/curelead.git
+  102  git remote rm origin
+  103  git remote add origin https://github.com/curelead/curelead.git
+  104  git push -u origin master
+  105  git push -u origin master
+  106  ls
+  107  ls
+  108  cd workspace/
+  109  ls
+  110  cd curelead
+  111  ls
+  112  ls
+  113  pwd
+  114  git add .
+  115  git commit -m "login fix"
+  116  history | grep heroku
+  117  git push heroku master
+  118  heroku open
+  119  git add .
+  120  git commit -m "profile fix"
+  121  git push heroku master
+  122  ls
+  123  cd curelead
+  124  cd workspace/
+  125  ls
+  126  cd curelead
+  127  ls
+  128  git add .
+  129  git commit -m "link fix"
+  130  git push origin master
+  131  heroku run
+  132  history | grep heroku
+  133  heroku run rails console
+  134  curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=”10″ bash
+  135  curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=”10″ bash
+  136  curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=”9″ bash
+  137  history | grep heroku
+  138  open ~\Library\Application Support\Microsoft\Office\Office 2011 AutoRecovery
+  139  ~\Library\Application Support\Microsoft\Office\
+  140  open ~\Library\Application Support\Microsoft\Office\Office 2011 AutoRecovery
+  141  open ~\Library\Application Support\Microsoft\Office
+  142  defaults write com.apple.finder AppleShowAllFiles YES
+  143  ls
+  144  cd workspace/
+  145  ls
+  146  cd cureleadui
+  147  ls
+  148  rails s
+  149  ls
+  150  rails s
+  151  ls
+  152  ls
+  153  ls
+  154  ls
+  155  console
+  156  rails console
+  157  defaults write com.apple.Finder AppleShowAllFiles YES
+  158  killall Finder
+  159  killall Finder
+  160  ~/
+  161  open ~/
+  162  open ~/
+  163  open ~/Library
+  164  open ~/Library
+  165  ls
+  166  cd workspace/cureleadui
+  167  ls
+  168  rails server
+  169  rails s
+  170  rails server
+  171  rails server
+  172  private/var/folders
+  173  open /private/var/folders
+  174  open /private/var
+  175  open /private/var/folders/
+  176  pwd
+  177  ls
+  178  git init
+  179  git add .
+  180  git commit -am "new ui done"
+  181  heroku create cureleadbeta
+  182  heroku create cureleadbeta
+  183  bundle install
+  184  git push heroku master
+  185  heroku run rake db:schema:load
+  186  heroku run rake db:migrate
+  187  heroku ps:scale web=1
+  188  heroku open
+  189  git add .
+  190  git commit -am "mail fix"
+  191  git push heroku master
+  192  rails console
+  193  ls
+  194  ls
+  195  cd workspace/
+  196  ls
+  197  cd cureleadui
+  198  ls
+  199  RAILS_ENV=production bundle exec rake assets:precompile:all
+  200  rails console
+  201  RAILS_ENV=production bundle exec rake assets:precompile
+  202  git push heroku master
+  203  heroku open
+  204  heroku db:push
+  205  heroku pg:push
+  206  heroku pg:transfer
+  207  heroku db:push
+  208  heroku plugins:install https://github.com/ddollar/heroku-pg-transfer
+  209  heroku pg:transfer --help
+  210  heroku pg:transfer
+  211   env DATABASE_URL=postgres://localhost/someapp-dev heroku pg:transfer
+  212   env DATABASE_URL=postgres://localhost/someapp-dev heroku pg:transfer
+  213  heroku pg:transfer
+  214  rails s
+  215  ls
+  216  rake assets:precompile
+  217  git push heroku master
+  218  git commit 
+  219  git commit -am "precompile"
+  220  git push heroku master
+  221  heroku open
+  222  heroku pg:push
+  223  heroku pg:reset
+  224  heroku pg:push
+  225  heroku db:push
+  226  heroku run rake db:migrate
+  227  heroku pg:push
+  228  heroku pg:reset DATABASE
+  229  heroku run rake db:migrate
+  230  heroku run rake db:migrate
+  231  heroku open
+  232  heroku pg:push
+  233  ls
+  234  cd workspace/
+  235  ls
+  236  cd cureleadui
+  237  rails s
+  238  rails s
+  239  ls
+  240  git init
+  241  rake assets:precompile
+  242  git init
+  243  git add .
+  244  git commit -am "ui completion"
+  245  heroku create cureleadbeta
+  246  bundle install
+  247  git push heroku master
+  248  heroku pg:push
+  249  heroku run rake db:create
+  250  heroku run rake db:schema:load
+  251  heroku run rake db:migrate
+  252  heroku run rake db:push
+  253  heroku run db:push
+  254  heroku db:push
+  255  heroku pg:push
+  256  git add .
+  257  git commit -am "up arrow"
+  258  git push heroku master
+  259  heroku oopen
+  260  heroku open
+  261  git commit -am "titlelength"
+  262  git add .
+  263  git commit -am "titlelength30"
+  264  git add .
+  265  git commit -am "titlelength30"
+  266  git push heroku master
+  267  git add .
+  268  git commit -am "edit post"
+  269  git push heroku master
+  270  heroku open
+  271  ls
+  272  cd workspace/
+  273  ls
+  274  cd prelaunchr-master/
+  275  ls
+  276  bundle exec rake db:create db:schema:load db:seed
+  277  bundle install
+  278  bundle exec rake db:create db:schema:load db:seed
+  279  bundle exec rails s
+  280  rails s
+  281  cd workspace/
+  282  ls
+  283  cd bijouxjunglelaunch/
+  284  ls
+  285  rails s
+  286  bundle install
+  287  rails s
+  288  rake assets:precompile
+  289  bundle install
+  290  rails s
+  291  bundle exec rake db:create db:schema:load db:seed
+  292  rails s
+  293  bundle exec rails s
+  294  ls
+  295  cd workspace/
+  296  ls
+  297  cd prelaunchr-master
+  298  git init
+  299  git add .
+  300  git ci -m 'initial commit.'
+  301  git -am 'initial commit.'
+  302  git commit -m 'initial commit.'
+  303  patch -p1 < fixes.diff
+  304  git add .
+  305  git commit -m 'Fixed asets precompile'
+  306  heroku create
+  307  heroku create bijoux
+  308  heroku addons:add heroku-postgresql
+  309  git push heroku master
+  310  heroku run rake db:schema:load
+  311  heroku open
+  312  /Users/jz/workspace/prelaunchr-master/app/views/layouts/application.html.erb ; exit;
+  313  ls
+  314  cd workspace/
+  315  ls
+  316  cd prelaunchr-master/
+  317  ls
+  318  rails s
+  319  cd 
+  320  ls
+  321  cd prelaunch-master
+  322  pwd
+  323  cd workspace/
+  324  ls
+  325  cd prelaunchr-master/
+  326  ls
+  327  bundle install
+  328  rake db:schema:load
+  329  rails s
+  330  rails server
+  331  ls
+  332  heroku open
+  333  git push heroku master
+  334  git add .
+  335  git commit -m 'custom first page'
+  336  git push heroku master
+  337  heroku open
+  338  git add .
+  339  git commit -m 'custom refer'
+  340  heroku open
+  341  git push heroku master
+  342  heroku open
+  343  git add .
+  344  git commit -m 'custom refer 2'
+  345  git push heroku master
+  346  pwd
+  347  git push heroku master
+  348  heroku open
+  349  git add .
+  350  git commit -m 'logo change'
+  351  git push heroku master
+  352  git add .
+  353  git commit -m 'logo change 2'
+  354  git push heroku master
+  355  git add .
+  356  git commit -m 'mammoth change'
+  357  git push heroku master
+  358  git add .
+  359  git commit -m 'removed prize words'
+  360  git push heroku master
+  361  git add .
+  362  git commit -m 'added prize pics'
+  363  git push heroku master
+  364  git add .
+  365  git commit -m 'added prize pics 2'
+  366  git push heroku master
+  367  git add .
+  368  git commit -m 'added prize pics 2'
+  369  git add .
+  370  git commit -m 'added prize words'
+  371  git push heroku master
+  372  heroku open
+  373  git add .
+  374  git commit -m 'iphone compatible'
+  375  git push heroku master
+  376  git add .
+  377  git commit -m 'namereplace'
+  378  git push heroku master
+  379  git add .
+  380  git add .
+  381  git commit -m 'facebook eliminate'
+  382  git push heroku master
+  383  heroku open
+  384  git add .
+  385  git add .
+  386  git commit -m 'facebook add'
+  387  git push heroku master
+  388  git add .
+  389  git commit -m 'imageadd'
+  390  git push heroku master
+  391  heroku run bundle exec rake prelaunchr:create_winner_csvs
+  392  heroku git:clone -a myapp
+  393  cd ..
+  394  heroku git:clone -a bijoux
+  395  cd bijoux
+  396  ls
+  397  bundle exec rake prelaunchr:create_winner_csvs
+  398  bundle exec rake bijoux:create_winner_csvs
+  399  ls
+  400  cd workspace/
+  401  ls
+  402  cd prelaunchr-master/
+  403  ls
+  404  heroku pgbackups:capture
+  405  heroku addons:add pgbackups
+  406  heroku pgbackups:capture
+  407  curl -o latest.dump `heroku pgbackups:url`
+  408  pg_restore -l latest.dump
+  409  pg_restore latest.dump > db.sql
+  410  ls
+  411  cd workspace/
+  412  ls
+  413  cd prelaunchr-master/
+  414  heroku pgbackups:capture
+  415  curl -o latest.dump `heroku pgbackups:url`
+  416  pg_restore latest.dump > db2.sql
+  417  pwd
+  418  ls
+  419  cd workspace/
+  420  ls
+  421  cd prelaunchr-master/
+  422  ls
+  423  heroku pgbackups:capture
+  424  curl -o latest2.dump `heroku pgbackups:url`
+  425  pg_restore latest2.dump > db2.sql
+  426  heroku pgbackups:capture
+  427  curl -o latest3.dump `heroku pgbackups:url`
+  428  pg_restore latest3.dump > db3.sql
+  429  ls
+  430  cd workspace/
+  431  ls
+  432  cd docon/
+  433  ls
+  434  bundle install
+  435  rake
+  436  rake db:migrate
+  437  rails s
+  438  ls
+  439  cd workspace/
+  440  ls
+  441  cd ericatyelp/
+  442  ls
+  443  ls
+  444  ls
+  445  git init
+  446  git add .
+  447  git commit -m "mycommit"
+  448  heroku create erelp
+  449  bundle install
+  450  git push heroku master
+  451  rake assets:precompile
+  452  git push heroku master
+  453  cd work
+  454  cd workspace
+  455  ls
+  456  history | grep bundle
+  457  cd ..
+  458  ls
+  459  cd workspace/
+  460  ls
+  461  cd toxbox/
+  462  ls
+  463  bundle install
+  464  rake doc:app
+  465  rails s
+  466  rake assets:precompile
+  467  rake db:create
+  468  rails s
+  469  rake
+  470  rails server
+  471  ls
+  472  rake assets:precompile
+  473  git init
+  474  git add .
+  475  git commit -am "mycommit"
+  476  heroku create toxbox
+  477  bundle install
+  478  git push heroku master
+  479  heroku open
+  480  rake assets:precompile
+  481  git push heroku master
+  482  ls
+  483  cd workspace/
+  484  ls
+  485  cd ericatyelp/
+  486  ls
+  487  bundle install
+  488  rake
+  489  rails s
+  490  ls
+  491  ls
+  492  cd Do
+  493  cd Downloads/
+  494  ls
+  495  grep derm report 2.csv
+  496  grep derm report.csv
+  497  grep derm report.csv > dermreport.csv
+  498  grep dermatology report.csv > dermatologyreport.csv
+  499  grep botox report.csv > botoxreport.csv
+  500  ls
+  501  cd workspace/
+  502  ls
+  503  cd prelaunchr-master/
+  504  cd ..
+  505  cd bijoux
+  506  ls
+  507  heroku pgbackups:capture
+  508  curl -o latest4.dump `heroku pgbackups:url`
+  509  pg_restore latest4.dump > db4.sql
+  510  history > capturedatabaserecord
