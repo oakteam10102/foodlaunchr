@@ -15,25 +15,25 @@ class User < ActiveRecord::Base
             'count' => 5,
             "html" => "50% OFF <br> 1 First Week's Subscription",
             "class" => "two",
-            "image" =>  "http://s4.favim.com/orig/50/club-delicious-food-lunch-sanwich-Favim.com-460453.jpg"
+            "image" =>  "http://thesavorychronicles.files.wordpress.com/2013/05/vertical.jpg"
         },
         {
             'count' => 10,
             "html" => "Free Meal <br> A Free Meal Valued at $15",
             "class" => "three",
-            "image" => "http://www.abc.net.au/news/image/853746-3x2-940x627.jpg"
+            "image" => "http://us.123rf.com/450wm/yuliadavidovich/yuliadavidovich1402/yuliadavidovich140200249/26259640-italian-food--spaghetti-bolognese-vertical.jpg"
         },
         {
             'count' => 25,
             "html" => "2 Weeks <br> 2 Weeks of Free FoodGem Meals",
             "class" => "four",
-            "image" => "http://1.bp.blogspot.com/_0DNo0eySp-8/TSL7oN98tFI/AAAAAAAAAQE/6Y6M6fvxXqM/s400/sushi-india-japanese-cuisine.jpg"
+            "image" => "http://24.media.tumblr.com/tumblr_m98h8bHn751rcjq6vo1_250.png"
         },
         {
             'count' => 50,
             "html" => "Free Month <br> Month of Free FoodGem Meals",
             "class" => "five",
-            "image" => "http://ouritaliantable.com/wp-content/uploads/2010/06/crabmeat-pasta.jpg"
+            "image" => "http://thumbs.dreamstime.com/z/cooked-crabs-food-8471152.jpg"
         }
     ]
 
