@@ -405,7 +405,7 @@ html.home{
 
 #refer .prizes{
 	width: 100%;
-	background: #FF9933;;
+	background: #FFF;
 	border-top: 1px solid #D2D1C8;
 	padding-bottom: 100px;
 }
@@ -417,7 +417,7 @@ html.home{
 #refer .prizes .callout{
 	text-align: center;
 	font-size: 16px;
-	color: #222;
+	color: #FF9933;
 	font-weight: bold;
 	margin: 20px 0 0 0;
 	letter-spacing: 2px;
