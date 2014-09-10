@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
             'count' => 10,
             "html" => "Free Meal <br> A Free Meal Valued at $15",
             "class" => "three",
-            "image" => "http://us.123rf.com/450wm/yuliadavidovich/yuliadavidovich1402/yuliadavidovich140200249/26259640-italian-food--spaghetti-bolognese-vertical.jpg"
+            "image" => "http://24.media.tumblr.com/tumblr_mck8eqJ2101rcjq6vo1_500.png"
         },
         {
             'count' => 25,
