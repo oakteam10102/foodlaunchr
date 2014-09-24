@@ -13,25 +13,25 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "50% OFF <br> 1 First Week's Subscription",
+            "html" => "50% OFF <br> 1st Month Subscription on Signup",
             "class" => "two",
             "image" =>  "http://thesavorychronicles.files.wordpress.com/2013/05/vertical.jpg"
         },
         {
             'count' => 10,
-            "html" => "Free Meal <br> A Free Meal Valued at $15",
+            "html" => "1 Free Meal <br> on Signup",
             "class" => "three",
             "image" => "http://24.media.tumblr.com/tumblr_mck8eqJ2101rcjq6vo1_500.png"
         },
         {
             'count' => 25,
-            "html" => "2 Weeks <br> 2 Weeks of Free FoodGem Meals",
+            "html" => "2 Free Meals <br> on Signup",
             "class" => "four",
             "image" => "http://24.media.tumblr.com/tumblr_m98h8bHn751rcjq6vo1_250.png"
         },
         {
             'count' => 50,
-            "html" => "Free Month <br> Month of Free FoodGem Meals",
+            "html" => "1 Month of Free Meals <br> on Signup",
             "class" => "five",
             "image" => "http://thumbs.dreamstime.com/z/cooked-crabs-food-8471152.jpg"
         }
