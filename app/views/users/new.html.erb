@@ -12,7 +12,7 @@
         <p class="go-to brandon">In the meantime, head to  <a href="http://www.foodgem.com/">WWW.FOODGEM.COM</a></p>
         <p class="again brandon">Thank You Again!</p>
     <% else %>
-        <p class="thanks brandon">FoodGem Is Launching</p>
+        <p class="byline brandon" style="color: #FF9933;">FoodGem Is Launching</p>
         <p class="byline brandon">Be the first to know</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
