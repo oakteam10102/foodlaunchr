@@ -1,6 +1,6 @@
 <div class="hero">
 <!--<iframe width="965" height="480" src="//www.youtube.com/embed/JQM5j4mFK8k?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>-->
-<div style="margin: 50px auto; width: 600px;" ><iframe width="700" height="400" src="//www.youtube.com/embed/vlAW-dQcywU?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></div>
+<div style="margin: 20px auto; width: 600px;" ><iframe width="700" height="400" src="//www.youtube.com/embed/vlAW-dQcywU?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></div>
   <!--  <p class="large brandon">FoodGem is live</p>
     <p class="small brandon">Quality, Affordable, and Different food<br>right at your finger tips!</p>-->
 </div>
@@ -12,7 +12,7 @@
         <p class="go-to brandon">In the meantime, head to  <a href="http://www.foodgem.com/">WWW.FOODGEM.COM</a></p>
         <p class="again brandon">Thank You Again!</p>
     <% else %>
-        <div class="key"></div>
+        <p class="thanks brandon">FoodGem Is Launching</p>
         <p class="byline brandon">Be the first to know</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
