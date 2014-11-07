@@ -1,4 +1,4 @@
-<div class="hero" style="background-image: url(http://foodgem.com/beta/img/pizza-header-bg.jpg); height: 1000px; width: 100%; background-size: 100% 100%;">
+<div class="hero" style="background-image: url(http://foodgem.com/beta/img/pizza-header-bg.jpg); height: 800px; width: 100%; background-size: 100% 100%;">
 <!--<iframe width="965" height="480" src="//www.youtube.com/embed/JQM5j4mFK8k?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe>-->
 <!--<div style="margin: 20px auto; width: 700px;" ><iframe width="700" height="400" src="//www.youtube.com/embed/vlAW-dQcywU?controls=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen=""></iframe></div>-->
   <!--  <p class="large brandon">FoodGem is live</p>
@@ -20,11 +20,11 @@ line-height: 40px;
         <p class="again brandon">Thank You Again!</p>
     <% else %>
         <div style=" margin-bottom: 25px;
-font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-family: 'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif;
 font-size: 40px;
 font-style: italic;
 line-height: 40px;">FoodGem has arrived</div>
-        <p class="byline brandon" style="color: #FF9933; font-family: 'Fugaz One',cursive;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
+        <p class="byline brandon" style="color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
