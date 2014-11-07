@@ -27,7 +27,7 @@ margin: 0 0 14px 0;
 line-height: 1.1; text-align: center;">FoodGem has arrived</div>
         <p class="byline brandon" style="font-size: 16px; color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-         <div style="font-size: 20px; line-height: 1.5;">   <%= f.text_field :email, :placeholder => "Enter Email", :style => "font-size: 20px; line-height: 1.5; height: 30px;"%>
+         <div style="font-size: 20px; line-height: 1.5; width: 400px; margin: 0 auto;">   <%= f.text_field :email, :placeholder => "Enter Email", :style => "font-size: 20px; line-height: 1.5; height: 30px;"%>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" /><div/>
         <% end %>
     <% end %>
