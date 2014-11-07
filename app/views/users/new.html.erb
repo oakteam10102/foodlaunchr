@@ -23,11 +23,17 @@ line-height: 40px;
 font-family: 'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif;
 font-size: 40px;
 font-style: italic;
-line-height: 40px;">FoodGem has arrived</div>
+line-height: 40px; color: #fff;">FoodGem has arrived</div>
         <p class="byline brandon" style="color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+            <input class="submit brandon" style="font-size: 18px;
+padding: 5px 10px;
+line-height: 1.4;
+border: 3px solid #222;
+outline: none;
+letter-spacing: .1em;
+font-family: 'Oswald',sans-serif;"name="commit" type="submit" value="Step Inside" />
         <% end %>
     <% end %>
 </div>
