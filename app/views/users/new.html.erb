@@ -20,11 +20,14 @@ line-height: 40px;
         <p class="again brandon">Thank You Again!</p>
     <% else %>
         <div style=" margin-bottom: 25px;
-font-size: 50px;
-line-height: 40px; color: #fff;">FoodGem has arrived</div>
+font-size: 40px;
+line-height: 40px; color: #fff; font-family: 'Fugaz One',cursive;
+font-weight: normal;
+margin: 0 0 14px 0;
+line-height: 1.1; text-align: center;">FoodGem has arrived</div>
         <p class="byline brandon" style="font-size: 16px; color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-         <div style="font-size: 20px; line-height: 1.5;">   <%= f.text_field :email, :placeholder => "Enter Email", :style => "font-size: 20px; line-height: 1.5;"%>
+         <div style="font-size: 20px; line-height: 1.5;">   <%= f.text_field :email, :placeholder => "Enter Email", :style => "font-size: 20px; line-height: 1.5; height: 30px;"%>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" /><div/>
         <% end %>
     <% end %>
