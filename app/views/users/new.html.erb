@@ -12,7 +12,7 @@ font-style: italic;
 line-height: 40px;
 ">FoodGem is a platform that delivers a different and delicous meal to you every week</div>-->
 
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>" style="padding: 300px 0;">
+<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>" style="padding: 200px 0;">
     <% if Rails.application.config.ended %>
         <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
         <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
@@ -20,14 +20,18 @@ line-height: 40px;
         <p class="again brandon">Thank You Again!</p>
     <% else %>
         <div style=" margin-bottom: 25px;
-font-family: 'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif;
-font-size: 40px;
-font-style: italic;
+font-size: 50px;
 line-height: 40px; color: #fff;">FoodGem has arrived</div>
-        <p class="byline brandon" style="color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
+        <p class="byline brandon" style="font-size: 16px; color: #FF9933; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" style="font-size: 18px;
+            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon", :style="font-size: 30px;
+padding: 5px 10px;
+line-height: 1.4;
+border: 3px solid #222;
+outline: none;
+letter-spacing: .1em;
+font-family: 'Oswald',sans-serif;"%>
+            <input class="submit brandon" style="font-size: 30px;
 padding: 5px 10px;
 line-height: 1.4;
 border: 3px solid #222;
