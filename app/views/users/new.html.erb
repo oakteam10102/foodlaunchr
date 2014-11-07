@@ -28,7 +28,7 @@ line-height: 1.1; text-align: center; margin: 50px 0;padding: 200px 0 0 0;">FOOD
         
         <p class="byline brandon" style="font-size: 25px; color: #fed136; font-family: 'Oswald',sans-serif;">FOOD DELIVERY SUCKED. UNTIL NOW.</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-          <%= f.text_field :email, :placeholder => "Enter Email"%>
+            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
             <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
         <% end %>
     <% end %>
