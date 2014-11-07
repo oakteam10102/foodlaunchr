@@ -13,13 +13,13 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "10% OFF <br> 1st Meal on Signup",
+            "html" => "30% OFF <br> 1st Meal on Signup",
             "class" => "two",
             "image" =>  "http://thesavorychronicles.files.wordpress.com/2013/05/vertical.jpg"
         },
         {
             'count' => 10,
-            "html" => "30% OFF <br> 1st Meal on Signup",
+            "html" => "50% OFF <br> 1st Meal on Signup",
             "class" => "three",
             "image" => "http://24.media.tumblr.com/tumblr_mck8eqJ2101rcjq6vo1_500.png"
         },
