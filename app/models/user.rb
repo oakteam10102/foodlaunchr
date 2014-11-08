@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
-    after_create :send_welcome_email
+    after_create :send_welcome_email, :update_referrer
 
     REFERRAL_STEPS = [
         {
@@ -54,4 +54,10 @@ class User < ActiveRecord::Base
     def send_welcome_email
         UserMailer.delay.signup_email(self)
     end
+
+    def update_referrer
+        referrer.ref_count = referrer.referrals.count
+        referrer.save
+    end
+
 end
