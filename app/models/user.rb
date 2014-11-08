@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
     before_create :create_referral_code
     after_create :send_welcome_email, :update_referrer
 
+    after_initialize :init
+
     REFERRAL_STEPS = [
         {
             'count' => 5,
@@ -63,6 +65,10 @@ class User < ActiveRecord::Base
             referrer.save
         end
 
+    end
+
+    def init
+        self.ref_count ||= 0
     end
 
 end
