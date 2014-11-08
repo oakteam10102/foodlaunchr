@@ -28,4 +28,12 @@ namespace :prelaunchr do
             end
         }
     end
+
+    desc "Will update referrals count for all user"
+    task :update_referral_count => :environment do
+        User.all.each do |user|
+            user.ref_count = user.referrals.count
+            user.save
+        end
+    end
 end
