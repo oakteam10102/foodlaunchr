@@ -47,8 +47,6 @@ class UsersController < ApplicationController
 
             if !@referred_by.nil?
                 @user.referrer = @referred_by
-                @referred_by.ref_count = @referred_by.referrals.count + 1
-                @referred_by.save
             end
 
             @user.save
