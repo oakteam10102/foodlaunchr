@@ -54,4 +54,10 @@ class User < ActiveRecord::Base
     def send_welcome_email
         UserMailer.delay.signup_email(self)
     end
+
+    def update_referrer
+        referrer.ref_count = referrer.referrals.count
+        referrer.save
+    end
+
 end
