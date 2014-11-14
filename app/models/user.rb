@@ -7,8 +7,12 @@ class User < ActiveRecord::Base
     validates :email, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." }
     validates :referral_code, :uniqueness => true
 
+    before_destroy :reduce_referrers_ref_count
+
     before_create :create_referral_code
-    after_create :send_welcome_email
+    after_create :send_welcome_email, :update_referrer
+
+    after_initialize :init
 
     REFERRAL_STEPS = [
         {
@@ -56,8 +60,22 @@ class User < ActiveRecord::Base
     end
 
     def update_referrer
-        referrer.ref_count = referrer.referrals.count
-        referrer.save
+        if referrer
+            referrer.ref_count = referrer.referrals.count
+            referrer.save
+        end
+
+    end
+
+    def reduce_referrers_ref_count
+        def if referrer
+            referrer.ref_count = referrer.referrals.count - 1
+            referrer.save 
+        end
+    end
+
+    def init
+        self.ref_count ||= 0
     end
 
 end
