@@ -28,8 +28,9 @@ class UsersController < ApplicationController
                 )
             end
 
-            if cur_ip.count > 2
-                return redirect_to root_path
+            if cur_ip.count > 20
+                render 'ip_limit'
+                # return redirect_to root_path
             else
                 cur_ip.count = cur_ip.count + 1
                 cur_ip.save
