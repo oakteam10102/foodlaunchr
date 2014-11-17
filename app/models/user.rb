@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     before_destroy :reduce_referrers_ref_count
 
     before_create :create_referral_code
-    after_create :send_welcome_email, :update_referrer
+    after_create :send_welcome_email, :update_referrer, :send_welcome_email
 
     after_initialize :init
 
@@ -55,10 +55,6 @@ class User < ActiveRecord::Base
         self.referral_code = referral_code
     end
 
-    def send_welcome_email
-        UserMailer.delay.signup_email(self)
-    end
-
     def update_referrer
         if referrer
             referrer.ref_count = referrer.referrals.count
@@ -76,6 +72,28 @@ class User < ActiveRecord::Base
 
     def init
         self.ref_count ||= 0
+    end
+
+    def send_welcome_email
+        require 'mandrill'  
+        m = Mandrill::API.new ENV['FOODLAUNCHR_MANDRILL_KEY']
+        template_name = "welcome"
+        template_content = []
+        message = {  
+         :global_merge_vars=>[
+            {
+                name: "refcode",
+                content: referral_code
+            }
+         ],
+         :to=>[  
+           {  
+             :email=> email,  
+           }  
+         ],  
+        }  
+        sending = m.messages.send_template template_name, template_content, message  
+        puts sending
     end
 
 end
