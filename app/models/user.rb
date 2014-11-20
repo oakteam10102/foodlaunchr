@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     before_destroy :reduce_referrers_ref_count
 
     before_create :create_referral_code
-    after_create :send_welcome_email, :update_referrer
+    after_create :send_welcome_email, :update_referrer, :send_email_to_referrer
 
     after_initialize :init
 
@@ -40,6 +40,59 @@ class User < ActiveRecord::Base
             "image" => "http://thumbs.dreamstime.com/z/cooked-crabs-food-8471152.jpg"
         }
     ]
+
+    MILESTONES = [1, 2, 4, 5, 10, 25, 50]
+
+    def send_email_to_referrer
+        
+      unless referrer.nil?
+       
+        referrals_count = referrer.referrals.count
+        if MILESTONES.include? referrals_count
+            template_name = "launchr_#{referrals_count}_referral"
+            require 'mandrill'  
+            m = Mandrill::API.new ENV['FOODLAUNCHR_MANDRILL_KEY']
+            template_content = []
+            message = {  
+             :global_merge_vars=>[
+                {
+                    name: "refcode",
+                    content: referrer.referral_code
+                }
+             ],
+             :to=>[  
+               {  
+                 :email=> referrer.email,  
+               }  
+             ],  
+            }  
+            sending = m.messages.send_template template_name, template_content, message  
+            puts sending
+        end
+      end
+    end
+
+    def send_welcome_email
+        require 'mandrill'  
+        m = Mandrill::API.new ENV['FOODLAUNCHR_MANDRILL_KEY']
+        template_name = "welcome"
+        template_content = []
+        message = {  
+         :global_merge_vars=>[
+            {
+                name: "refcode",
+                content: referral_code
+            }
+         ],
+         :to=>[  
+           {  
+             :email=> email,  
+           }  
+         ],  
+        }  
+        sending = m.messages.send_template template_name, template_content, message  
+        puts sending
+    end
 
     private
 
@@ -74,26 +127,6 @@ class User < ActiveRecord::Base
         self.ref_count ||= 0
     end
 
-    def send_welcome_email
-        require 'mandrill'  
-        m = Mandrill::API.new ENV['FOODLAUNCHR_MANDRILL_KEY']
-        template_name = "welcome"
-        template_content = []
-        message = {  
-         :global_merge_vars=>[
-            {
-                name: "refcode",
-                content: referral_code
-            }
-         ],
-         :to=>[  
-           {  
-             :email=> email,  
-           }  
-         ],  
-        }  
-        sending = m.messages.send_template template_name, template_content, message  
-        puts sending
-    end
+    
 
 end
