@@ -30,6 +30,7 @@ gem 'delayed_job_active_record'
 
 gem 'unicorn'
 gem 'mandrill-api'
+gem 'sucker_punch'
 
 
 # To use ActiveModel has_secure_password

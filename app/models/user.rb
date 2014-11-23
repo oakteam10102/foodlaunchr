@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     before_destroy :reduce_referrers_ref_count
 
     before_create :create_referral_code
-    after_create :send_welcome_email, :update_referrer, :send_email_to_referrer
+    after_create :async_send_welcome_email, :update_referrer, :async_send_email_to_referrer
 
     after_initialize :init
 
@@ -95,6 +95,14 @@ class User < ActiveRecord::Base
     end
 
     private
+
+    def async_send_welcome_email
+        WelcomeMailJob.new.async.later(60, id)
+    end
+
+    def async_send_email_to_referrer
+        ReferrerMailJob.new.async.later(60, id)
+    end
 
     def create_referral_code
         referral_code = SecureRandom.hex(5)
